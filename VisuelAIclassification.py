@@ -3067,6 +3067,3 @@ class ImageTooltip:
 if __name__ == "__main__":
     app = Window()
     app.mainloop()
-
-    print("Script terminé.")
-    input("Appuyez sur Entrée pour fermer...")
