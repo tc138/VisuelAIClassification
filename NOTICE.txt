@@ -1,0 +1,53 @@
+NOTICE
+ 
+Copyright 2024 Theo CHARNAY, Leo Zwilling and Eric Pellegrino
+ 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+ 
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+This project includes third-party libraries distributed under their respective licenses. These licenses are compatible with the Apache License 2.0. See the `THIRD_PARTY_LICENSES` file for the full license texts.
+ 
+Third-party libraries used in this project:
+ 
+1. **TensorFlow**
+   - License: Apache License 2.0
+   - URL: https://github.com/tensorflow/tensorflow
+ 
+2. **Keras**
+   - License: Apache License 2.0
+   - URL: https://github.com/keras-team/keras
+ 
+3. **NumPy**
+   - License: BSD License
+   - URL: https://numpy.org
+ 
+4. **Matplotlib**
+   - License: BSD License
+   - URL: https://matplotlib.org
+ 
+5. **Seaborn**
+   - License: BSD License
+   - URL: https://seaborn.pydata.org
+ 
+6. **Scikit-learn**
+   - License: BSD License
+   - URL: https://scikit-learn.org
+ 
+7. **Pillow**
+   - License: Historical Permission Notice and Disclaimer (HPND)
+   - URL: https://python-pillow.org
+ 
+8. **CustomTkinter**
+   - License: MIT License
+   - URL: https://github.com/TomSchimansky/CustomTkinter
+ 
+10. **Python Standard Library**
+    - License: Python Software Foundation License (PSF)
+    - URL: https://docs.python.org/3/license.html
+
+11. **auto-py-to-exe**
+    - License: MIT License
+    - URL: https://github.com/brentvollebregt/auto-py-to-exe
