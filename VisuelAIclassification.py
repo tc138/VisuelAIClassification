@@ -1242,7 +1242,7 @@ By automating metadata removal, this module ensures that datasets are streamline
         try:
             # Call the remove EXIF function with the selected paths
             remove_exif_from_jpg(self.import_folder_pathEXIF, self.export_folder_pathEXIF)
-            print("EXIF data removal completed successfully.")
+            #print("EXIF data removal completed successfully.")
             # Optionally, show a confirmation message in the GUI
         except Exception as e:
             print(f"Error during EXIF removal: {e}")
@@ -1841,7 +1841,7 @@ Basic Usage: To train a model with minimal setup (left panel green buttons):
 
     3) Choose the folder where the trained model will be saved
 
-    4) Start the training process.
+    4) Start the training process. (Note: File paths must not contain accents or special characters; otherwise, the training will fail to start).
 
 ________________________________________
 In the basic settings, users can also:
@@ -2566,7 +2566,7 @@ This module enables you to evaluate the performance of your trained model on a d
 
 Thanks for using VisuelAIclassification.
 Developed by Théo CHARNAY, Leo Zwilling and Eric Pellegrino.
-You can contact us at: DARE-AI-ImageClassification@proton.me
+You can contact us at: theo.CHARNAY@univ-amu.fr
 Please cite us if you do publication using this software.
 
 Copyright 2024 Theo CHARNAY, Leo Zwilling and Eric Pellegrino
