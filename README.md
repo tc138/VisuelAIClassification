@@ -6,5 +6,6 @@ https://github.com/tc138/VisuelAIClassification/releases/download/VisuelAIClassi
 To use it, unzip the file, open the folder, and double-click on VisuelAIclassification.exe
 
 English tutotial : https://youtu.be/eksY2gx2udw
+
 Tutoriel en Français : https://youtu.be/ZOdlPcyndvU
 
