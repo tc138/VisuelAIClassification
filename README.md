@@ -9,3 +9,4 @@ English tutotial : https://youtu.be/eksY2gx2udw
 
 Tutoriel en Français : https://youtu.be/ZOdlPcyndvU
 
+If you want to use the code available here, please note that not all models are included, as their size exceeds GitHub's 25 MB file limit.
