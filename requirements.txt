@@ -1,0 +1,13 @@
+# to install the required packages use the command:
+# pip install -r requierements.txt
+
+
+tensorflow==2.16.1
+keras==3.5.0
+numpy==1.26.4
+matplotlib==3.9.2
+seaborn==0.13.2
+scikit-learn==1.5.1
+pillow==10.4.0
+customtkinter==5.2.2
+auto-py-to-exe==2.44.2
