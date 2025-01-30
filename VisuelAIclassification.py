@@ -88,7 +88,7 @@ def resource_path(relative_path):
 
 def remove_exif_from_jpg(input_dir, output_dir):
 
-    print("EXIF removal in progress…")
+    print("EXIF metadata removal in progress…")
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -115,16 +115,16 @@ def remove_exif_from_jpg(input_dir, output_dir):
                     print(f'Error processing {input_path}: {e}')
 
     # Obtenir les noms des sous-dossiers dans UserImages
-    class_names = [name for name in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, name))]
+    ###class_names = [name for name in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, name))]
     # Créer un dictionnaire {i: class_name} où i est un entier à partir de 0 et class_name est le nom du sous-dossier
-    new_dict = {i: class_name for i, class_name in enumerate(class_names)}
+    ###new_dict = {i: class_name for i, class_name in enumerate(class_names)}
     # Définir le nom du fichier en fonction du nombre de classes
-    dict_name = 'your_dictionary_with' + str(len(class_names)) + 'classes.txt'
+    ###dict_name = 'your_dictionary_with' + str(len(class_names)) + 'classes.txt'
     # Définir le chemin complet pour sauvegarder le fichier
-    dict_path = os.path.join(output_dir, dict_name)  # Sauvegarder le dictionnaire dans le fichier
-    with open(dict_path, 'w') as file:
-        file.write(str(new_dict))
-    print("EXIF removal completed. You can now proceed to annotation and sorting on the next page => Annotate and sort")
+    ###dict_path = os.path.join(output_dir, dict_name)  # Sauvegarder le dictionnaire dans le fichier
+    ###with open(dict_path, 'w') as file:
+    ###    file.write(str(new_dict))
+    print("EXIF metadata removal completed. You can now proceed to annotation and sorting on the next page => Annotate and sort")
 
 #############################aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa###################################aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
@@ -141,16 +141,16 @@ def create_and_augment(input, output, mode, augment_training, augment_validation
     fill_mode_choosen = mode #"constant", "reflect", "wrap", "nearest"
 
     # Obtenir les noms des sous-dossiers dans UserImages
-    class_names = [name for name in os.listdir(UserImages) if os.path.isdir(os.path.join(UserImages, name))]
+    ###class_names = [name for name in os.listdir(UserImages) if os.path.isdir(os.path.join(UserImages, name))]
     # Créer un dictionnaire {i: class_name} où i est un entier à partir de 0 et class_name est le nom du sous-dossier
-    new_dict = {i: class_name for i, class_name in enumerate(class_names)}
+    ###new_dict = {i: class_name for i, class_name in enumerate(class_names)}
     # Définir le nom du fichier en fonction du nombre de classes
-    dict_name = 'your_dictionary_with' + str(len(class_names)) + 'classes.txt'
+    ###dict_name = 'your_dictionary_with' + str(len(class_names)) + 'classes.txt'
     # Définir le chemin complet pour sauvegarder le fichier
-    dict_path = os.path.join(outputfolder, dict_name)
+    ###dict_path = os.path.join(outputfolder, dict_name)
     # Sauvegarder le dictionnaire dans le fichier
-    with open(dict_path, 'w') as file:
-        file.write(str(new_dict))
+    ###with open(dict_path, 'w') as file:
+    ###    file.write(str(new_dict))
 
     # Create target directories if they don't exist
     [os.makedirs(folder, exist_ok=True) for folder in [entrainement, validation, test]]
@@ -399,9 +399,21 @@ def train_model(yoursubject, yournumberofepochs, training_folder, validation_fol
 
 
     # Get the number of different labels (classes)
-    class_names = ds_train.class_names
+    class_names = ds_train.class_names # Get class names
     NUM_CLASSES = len(class_names)
     print(f'Number of different labels (classes): {NUM_CLASSES}')
+
+    # Créer un dictionnaire {i: class_name} où i est un entier à partir de 0 et class_name est le nom du sous-dossier
+    new_dict = {i: class_name for i, class_name in
+                enumerate(class_names)}  # Create a dictionary {integer: class_name}
+    classes = list(new_dict.values())  # List of string of class names
+    # Store new_dict as a text file in the save_dir
+    dict_as_text = str(new_dict)
+    dict_name = 'your_dictionary_with' + str(len(classes)) + 'classes.txt'
+    dict_path = os.path.join(save_dir, dict_name)
+    with open(dict_path, 'w') as x_file:
+        x_file.write(dict_as_text)
+
 
     # Print dataset lengths
     print('Number of batches in ds_train:', tf.data.experimental.cardinality(ds_train).numpy())
@@ -1129,7 +1141,6 @@ Step-by-step guide:
 
 Outputs
     Once the metadata removal is complete, the images will be saved in the output folder, ready for use.
-    Additionally, a .txt file containing class information will be generated in the output folder. This .txt file is essential for subsequent steps in the workflow, such as "Evaluate performance" and "Annotate and sort".
     
 By automating metadata removal, this module ensures that datasets are streamlined, anonymized, and optimized for image classification tasks.
 """
@@ -1182,7 +1193,7 @@ By automating metadata removal, this module ensures that datasets are streamline
         # Button to trigger EXIF removal
         self.remove_exif_button = ctk.CTkButton(
             self.left_panel_EXIF,
-            text="3) REMOVE EXIF",
+            text="3) Remove Metadata",
             command=self.remove_exif_action,
             fg_color="#e74c3c",  # Red to signify action
             text_color="white",
@@ -1312,7 +1323,6 @@ Step-by-step guide:
 
 Outputs and Verification
     Once the process is complete, you can verify the results by checking the subfolders in the output directory. The augmented images will be organized according to the specified categories, and their quality and interpretability can be assessed directly on your computer.
-    Additionally, a .txt file containing class information is generated in the output folder. This file is essential for subsequent steps in the workflow, such as visualization and model utilization.
     By ensuring systematic dataset preparation, this module facilitates efficient and effective model training while enhancing dataset robustness through augmentation."""
         self.explication_Augment.insert("1.0", text_content_Augment)
         self.explication_Augment.place(relx=0.5, rely=0.42, anchor="center", relwidth=0.95,
@@ -1842,7 +1852,8 @@ Basic Usage: To train a model with minimal setup (left panel green buttons):
     3) Choose the folder where the trained model will be saved
 
     4) Start the training process. (Note: File paths must not contain accents or special characters; otherwise, the training will fail to start).
-
+    
+Outputs : A .keras file containing your trained model and a .txt file containing class information will be generated in the output folder. These two files will be used in the "Annotate and Sort" step.
 ________________________________________
 In the basic settings, users can also:
 	• Assign a project name, which will be included in the saved model's filename (.keras file).
@@ -2263,6 +2274,9 @@ These layers are appended to the base model to adapt it to your dataset. The cus
    5) Review the outputs, which include:
         -Saved graphs visualizing metrics like accuracy and loss over the test dataset.
         -A classification report summarizing key performance metrics such as precision, recall, F1-score, and AUC ROC for each class.
+        -A .txt file containing class information will be generated in the output folder. This .txt file is essential for the subsequent “Annotate and sort” step.
+
+
 
 This module enables you to evaluate the performance of your trained model on a dataset that was not used during training. By generating visual outputs and detailed classification reports, it plays a crucial role in assessing the effectiveness and generalizability of your model while offering valuable insights into potential areas for improvement.
 """
@@ -2558,7 +2572,7 @@ This module enables you to evaluate the performance of your trained model on a d
         # Insert explanatory content
         text_content = """Step-by-step guide:
     1) Load your saved model (.keras file).
-    2) Load the .txt file containing the class information for which your model is trained. This file, named "your_dictionary_withXclasses.txt" (where X is the number of classes), is generated during the "Remove Exif" or "Augment Data" process.
+    2) Load the .txt file containing the class information for which your model is trained. This file, named "your_dictionary_withXclasses.txt" (where X is the number of classes), is generated during the "Train your model" or "Evaluate performance" process.
     3) Select the folder containing the images you want to classify.
     4) Choose the folder where you want to save your classified images.
     5) Start the prediction process.
