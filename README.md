@@ -6,10 +6,12 @@ To install and use the application, follow the steps below:
 
 Video de présentation en français:
 https://youtu.be/KeXXUIMaxdg
+
 English introductory video :
 https://youtu.be/D6fUgsbfo7k
 
-INSTALLATION
+
+# INSTALLATION
 
 Download the Application:
 Navigate to the Releases section of the repository.
@@ -17,6 +19,7 @@ Choose one of the following versions:
 
 Full Version (1.58 GB)
 Download the ZIP file from this link:https://github.com/tc138/VisuelAIClassification/releases/download/VisuelAIClassificationv1.0/VisuelAIclassification.zip
+
 Light Version (615 MB)
 Download the ZIP file from this link:https://github.com/tc138/VisuelAIClassification/releases/download/VisuelAIclassification_lightv1.0/VisuelAIclassification_light.zip
 
@@ -28,7 +31,7 @@ Run the Application:
 - Open the extracted folder.
 - Locate and double-click on VisuelAIclassification.exe to launch the application.
 
-USAGE
+# USAGE
 
 Once the application is running, you can begin sorting images using the provided interface.
 For detailed guidance on using the application, refer to the following tutorials:
@@ -39,7 +42,7 @@ Tutoriel en Français:
 Regardez le tutoriel sur YouTube : https://youtu.be/ZOdlPcyndvU
 
 
-FEATURES 
+# FEATURES 
 
 - Easy-to-use GUI for image classification tasks.
 
@@ -58,5 +61,5 @@ In such cases, you may need to obtain the full models separately or use the pre-
 
 By following these steps, you should be able to successfully install and use the VisuelAIClassification application for sorting images using computer vision.
 
-LICENSE
+# LICENSE
 VisuelAIClassification is distributed under the Apache License 2.0.
