@@ -1,26 +1,62 @@
 # VisuelAIClassification
-#__     ___                _    _    ___ ____ _               _  __ _           
-#\ \   / (_)___ _   _  ___| |  / \  |_ _/ ___| | __ _ ___ ___(_)/ _(_) ___ __ _ 
- \ \ / /| / __| | | |/ _ \ | / _ \  | | |   | |/ _` / __/ __| | |_| |/ __/ _` |
-  \ V / | \__ \ |_| |  __/ |/ ___ \ | | |___| | (_| \__ \__ \ |  _| | (_| (_| |
- _ \_/  |_|___/\__,_|\___|_/_/   \_\___\____|_|\__,_|___/___/_|_| |_|\___\__,_|
-| |_(_) ___  _ __                                                              
-| __| |/ _ \| '_ \                                                             
-| |_| | (_) | | | |                                                            
- \__|_|\___/|_| |_|           
+   
+VisuelAIClassification is a Python-based software designed for image classification and dataset preparation. 
+With a user-friendly graphical interface powered by CustomTkinter, the application enables users to leverage machine learning models without requiring programming skills.
+To install and use the application, follow the steps below:
+
+Video de présentation en français:
+https://youtu.be/KeXXUIMaxdg
+English introductory video :
+https://youtu.be/D6fUgsbfo7k
+
+INSTALLATION
+
+Download the Application:
+Navigate to the Releases section of the repository.
+Choose one of the following versions:
+
+Full Version (1.58 GB)
+Download the ZIP file from this link:https://github.com/tc138/VisuelAIClassification/releases/download/VisuelAIClassificationv1.0/VisuelAIclassification.zip
+Light Version (615 MB)
+Download the ZIP file from this link:https://github.com/tc138/VisuelAIClassification/releases/download/VisuelAIclassification_lightv1.0/VisuelAIclassification_light.zip
+
+Extract the ZIP File:
+After downloading, extract the contents of the ZIP file to a preferred location on your computer.
+
+Run the Application:
+
+- Open the extracted folder.
+- Locate and double-click on VisuelAIclassification.exe to launch the application.
+
+USAGE
+
+Once the application is running, you can begin sorting images using the provided interface.
+For detailed guidance on using the application, refer to the following tutorials:
+
+English Tutorial:
+Watch the tutorial on YouTube: https://youtu.be/eksY2gx2udw
+Tutoriel en Français:
+Regardez le tutoriel sur YouTube : https://youtu.be/ZOdlPcyndvU
 
 
-A tool to sort images with computer vision
+FEATURES 
 
-The software is downloadable as a ZIP file here (1.58 GB):
-https://github.com/tc138/VisuelAIClassification/releases/download/VisuelAIClassificationv1.0/VisuelAIclassification.zip
-To use it, unzip the file, open the folder, and double-click on VisuelAIclassification.exe
+- Easy-to-use GUI for image classification tasks.
 
-The light version with only 5 AI base models as a ZIP file here (615 MB):
-https://github.com/tc138/VisuelAIClassification/releases/download/VisuelAIclassification_lightv1.0/VisuelAIclassification_light.zip
+- Built-in support for TensorFlow and Keras models.
 
-English tutotial : https://youtu.be/eksY2gx2udw
+- Robust dataset preprocessing and manipulation tools.
 
-Tutoriel en Français : https://youtu.be/ZOdlPcyndvU
+- Interactive visualizations.
 
-If you want to use the code available here, please note that not all models are included, as their size exceeds GitHub's 25 MB file limit.
+- Lightweight and accessible as a standalone executable.
+
+
+Note:
+If you prefer to use the source code available in the repository, please be aware that not all models are included due to size limitations exceeding GitHub's 25 MB file size restriction. 
+In such cases, you may need to obtain the full models separately or use the pre-compiled executable as described above.
+
+By following these steps, you should be able to successfully install and use the VisuelAIClassification application for sorting images using computer vision.
+
+LICENSE
+VisuelAIClassification is distributed under the Apache License 2.0.
