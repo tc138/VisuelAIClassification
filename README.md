@@ -31,6 +31,7 @@ Run the Application:
 - Open the extracted folder.
 - Locate and double-click on VisuelAIclassification.exe to launch the application.
 
+
 # USAGE
 
 Once the application is running, you can begin sorting images using the provided interface.
@@ -38,6 +39,7 @@ For detailed guidance on using the application, refer to the following tutorials
 
 English Tutorial:
 Watch the tutorial on YouTube: https://youtu.be/eksY2gx2udw
+
 Tutoriel en Français:
 Regardez le tutoriel sur YouTube : https://youtu.be/ZOdlPcyndvU
 
