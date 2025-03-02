@@ -43,6 +43,9 @@ Watch the tutorial on YouTube: https://youtu.be/eksY2gx2udw
 Tutoriel en Français:
 Regardez le tutoriel sur YouTube : https://youtu.be/ZOdlPcyndvU
 
+You can test the software on the Hemato-Timone-Nord 40 000 images into 10 classes database with the link below :
+https://github.com/tc138/VisuelAIClassification/releases/download/Hemato40000database/Hemato-Timone-Nord40000.zip
+
 
 # FEATURES 
 
